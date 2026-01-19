@@ -1,23 +1,68 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
     max-width: 500px;
-    margin: 2rem auto;
+    margin: 3rem auto;
+    padding: 20px;
+    background-image: linear-gradient(#e1eec3, #f0f2f5);
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .controls {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 input {
     flex-grow: 1;
-    padding: 8px;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4caf50;
 }
 
 button {
     cursor: pointer;
-    padding: 8px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+#btnAdd {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#btnAdd:hover {
+    background-color: #43a047;
 }
 
 ul {
@@ -26,46 +71,99 @@ ul {
 }
 
 li {
-    background: #f4f4f4;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+    border-left: 5px solid #4caf50;
 }
 
 li:hover {
-    background-color: #eaeaea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 li.bought {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #fafafa;
+    color: #888;
     text-decoration: line-through;
+    border-left-color: #ccc;
+    opacity: 0.8;
 }
 
-.btn-delete {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 4px;
+li.bought span {
+    font-style: italic;
 }
 
-.extra-controls {
-    margin-top: 20px;
+.item-controls {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-secondary {
-    background: #666;
-    color: white;
-    border: none;
+    background: #ffebee;
+    color: #c62828;
+}
+
+.btn-secondary:hover {
+    background: #ffcdd2;
 }
 
 .btn-sort {
-    background: #007bff;
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.btn-sort:hover {
+    background: #c8e6c9;
+}
+
+.extra-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.extra-controls button {
+    padding: 10px 15px;
     color: white;
-    border: none;
+    font-size: 14px;
+}
+
+#btnClear {
+    background-color: #ef5350;
+}
+
+#btnClear:hover {
+    background-color: #e53935;
+}
+
+#btnToggleSort {
+    background-color: #2196f3;
+}
+
+#btnToggleSort:hover {
+    background-color: #1e88e5;
 }
